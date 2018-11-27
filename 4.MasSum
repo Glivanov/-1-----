@@ -1,0 +1,25 @@
+program MasSum;
+var
+A : array [ 1 .. 100 ] of integer ;
+c : integer ;
+i , j , N : ShortInt ;
+begin
+Write ( 'Number of array elements  = ' ) ;
+ReadLn ( N ) ;
+WriteLn ( 'Enter array' ) ;
+for i := 1 to N do
+Read ( A [ i ] ) ;
+A[i]:=abs(A[i]);
+WriteLn ;
+for i := 1 to N - 1 do begin
+for j := N downto i + 1 do begin
+if A [ j ] < A [ j - 1 ]
+then
+begin
+c := A [ j ] ; A [ j ] := A [ j - 1 ] ; A [ j - 1 ] := c ;
+end ;
+end;
+end;
+for i:=n-2 to n do writeln(A[i]);
+readln;
+end .

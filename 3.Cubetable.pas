@@ -1,12 +1,9 @@
 Program cubetable;
-var
-  i :integer;
-begin
-  i := 19;
-  while i < 54 do
+ var i : integer; 
   begin
-    Writeln(i^3);
-    inc(i, 2);
+  for i:=18 to 54 do
+  begin
+  if i mod 2 = 1 then write (i, '^3 = ', i*i*i);
+  readln;
   end;
-  Readln;
-end.
+  end.

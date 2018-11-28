@@ -1,24 +1,17 @@
 Program: ArraySort
-Const n=1000;
-Var A:array[1..n] of integer;
-    i,j,t:integer;
-Begin
-    writeln('key array');
-    For i:=1 to n do
-    Begin
-      A[i]:=random(21)-10;
-      write(A[i]:4);
-    End;
-    writeln;
-    For i:=n downto 2 do
-     For j:=2 to i do
-      if A[j]>A[j-1] then
-      Begin
-        t:=A[j];
-        A[j]:=A[j-1];
-        A[j-1]:=t;
-      End;
-    For i:=1 to n do
-     write(A[i]:4);
-    readln;
-End.
+  var n, i, j, x, imax: integer;
+      a: array [1..10] of integer;
+begin
+  for i:=1 to 10 do a[i]:=random(100);
+  for i:=1 to 10 do write (a[i], ' ');
+  for i:=1 to 9 do
+  begin
+    imax:=i;
+    for j:=i+1 to 10 do if a[j]<a[imax] then imax:=j;
+    x:=a[i];
+    a[i]:=a[imax];
+    a[imax]:=x
+   end;
+   writeln;
+  for i:=1 to 10 do write (a[i], ' ')
+ end.
